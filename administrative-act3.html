@@ -44,6 +44,7 @@
   nav#sidebar summary.nav-part { color: #92400e; }
   nav#sidebar a { display: block; padding: 3px 0; color: #0645ad; text-decoration: none; font-weight: normal; }
   nav#sidebar a:hover { text-decoration: underline; }
+  nav#sidebar a.active-section { font-weight: 700; color: #b91c1c; }
   main {
     flex: 1;
     padding: 32px 48px;
@@ -157,5 +158,40 @@
   <footer>อ่านอย่างเดียว — ต้นฉบับอยู่ใน Google Drive (Eddy/99_Claude/act3_liability). แก้ไขผ่าน Claude เท่านั้น</footer>
 </main>
 </div>
+<script>
+(function() {
+  var sidebarLinks = {};
+  document.querySelectorAll('#sidebar a[href^="#"]').forEach(function(a) {
+    sidebarLinks[a.getAttribute('href').slice(1)] = a;
+  });
+  var sections = [];
+  Object.keys(sidebarLinks).forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) sections.push(el);
+  });
+  if (!sections.length) return;
+  var activeId = null;
+  function setActive(id) {
+    if (activeId === id) return;
+    if (activeId && sidebarLinks[activeId]) sidebarLinks[activeId].classList.remove('active-section');
+    activeId = id;
+    var link = sidebarLinks[id];
+    if (!link) return;
+    link.classList.add('active-section');
+    var d = link.closest('details');
+    while (d) {
+      d.open = true;
+      d = d.parentElement ? d.parentElement.closest('details') : null;
+    }
+  }
+  var observer = new IntersectionObserver(function(entries) {
+    var visible = entries.filter(function(e) { return e.isIntersecting; });
+    if (!visible.length) return;
+    visible.sort(function(a, b) { return a.boundingClientRect.top - b.boundingClientRect.top; });
+    setActive(visible[0].target.id);
+  }, { rootMargin: '-45px 0px -70% 0px', threshold: 0 });
+  sections.forEach(function(el) { observer.observe(el); });
+})();
+</script>
 </body>
 </html>
