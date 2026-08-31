@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>พระราชบัญญัติความรับผิดทางละเมิดของเจ้าหน้าที่ พ.ศ. ๒๕๓๙ — Agiluk Almanac</title>
+<style>
+  :root {
+    --sidebar-w: 320px;
+    --border: #ddd;
+    --annotation-bg: #fff8e6;
+    --annotation-border: #e0b84a;
+  }
+  * { box-sizing: border-box; }
+  html { color-scheme: light; }
+  body {
+    margin: 0;
+    font-family: "Sarabun", "Noto Sans Thai", -apple-system, sans-serif;
+    color: #1a1a1a;
+    background: #ffffff;
+  }
+  .layout {
+    display: flex;
+    min-height: calc(100vh - 45px);
+  }
+  nav#sidebar {
+    width: var(--sidebar-w);
+    flex-shrink: 0;
+    border-right: 1px solid var(--border);
+    padding: 16px;
+    overflow-y: auto;
+    max-height: calc(100vh - 45px);
+    position: sticky;
+    top: 45px;
+    background: #fafafa;
+  }
+  nav#sidebar h2 { font-size: 15px; margin: 0 0 12px; }
+  nav#sidebar ul { list-style: none; margin: 0; padding-left: 14px; }
+  nav#sidebar > ul { padding-left: 0; }
+  nav#sidebar summary { cursor: pointer; font-weight: 600; padding: 3px 0; }
+  nav#sidebar summary.nav-book { color: #111111; font-size: 15px; }
+  nav#sidebar summary.nav-title { color: #1a4d8f; }
+  nav#sidebar summary.nav-chapter { color: #0f766e; }
+  nav#sidebar summary.nav-part { color: #92400e; }
+  nav#sidebar a { display: block; padding: 3px 0; color: #0645ad; text-decoration: none; font-weight: normal; }
+  nav#sidebar a:hover { text-decoration: underline; }
+  main {
+    flex: 1;
+    padding: 32px 48px;
+    max-width: 900px;
+  }
+  .node { scroll-margin-top: 60px; }
+  .node-article { margin: 28px 0; padding-top: 8px; border-top: 1px solid #eee; }
+  .node-article h5 { font-size: 17px; margin: 0 0 6px; color: #333; }
+  p.statute { line-height: 1.8; margin: 0 0 10px; }
+  blockquote.annotation {
+    background: var(--annotation-bg);
+    border-left: 4px solid var(--annotation-border);
+    margin: 10px 0;
+    padding: 8px 14px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .annotation-label { font-weight: 700; margin-right: 6px; }
+  h1 { font-size: 24px; }
+  h2 { font-size: 21px; border-bottom: 2px solid #333; padding-bottom: 6px; }
+  h3 { font-size: 18px; color: #444; }
+  h4 { font-size: 16px; color: #555; }
+  footer { margin-top: 40px; color: #999; font-size: 12px; }
+
+  nav.switcher {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    align-items: center;
+    padding: 10px 48px;
+    border-bottom: 1px solid #ddd;
+    background: #fafafa;
+    font-size: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 40;
+  }
+  nav.switcher .switcher-home {
+    font-weight: 700;
+    color: #111;
+    text-decoration: none;
+    margin-right: 8px;
+  }
+  nav.switcher .switcher-link {
+    color: #555;
+    text-decoration: none;
+    padding: 2px 0;
+  }
+  nav.switcher .switcher-link:hover { text-decoration: underline; }
+  nav.switcher .switcher-link.active {
+    color: #0645ad;
+    font-weight: 600;
+    border-bottom: 2px solid #0645ad;
+  }
+  @media (max-width: 768px) {
+    nav.switcher { padding: 10px 16px; }
+  }
+
+  input.nav-toggle { display: none; }
+  label.nav-toggle-label { display: none; }
+  label.nav-backdrop { display: none; }
+
+  @media (max-width: 768px) {
+    label.nav-toggle-label {
+      display: block;
+      position: sticky;
+      top: 45px;
+      z-index: 20;
+      padding: 12px 16px;
+      background: #fafafa;
+      border-bottom: 1px solid var(--border);
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .layout { flex-direction: column; }
+    nav#sidebar {
+      position: fixed;
+      top: 0;
+      left: -85%;
+      width: 85%;
+      max-width: 320px;
+      height: 100vh;
+      z-index: 30;
+      transition: left 0.2s ease;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+    }
+    input.nav-toggle:checked ~ .layout nav#sidebar { left: 0; }
+    input.nav-toggle:checked ~ .layout label.nav-backdrop {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.3);
+      z-index: 25;
+    }
+    main { padding: 20px; max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<nav class="switcher"><a class="switcher-home" href="/index.html">Agiluk Almanac</a><a class="switcher-link" href="/constitution.html">รัฐธรรมนูญแห่งราชอาณาจักรไทย</a><a class="switcher-link" href="/civil.html">ประมวลกฎหมายแพ่งและพาณิชย์</a><a class="switcher-link" href="/criminal.html">ประมวลกฎหมายอาญา</a><a class="switcher-link active" href="/administrative.html">กฎหมายปกครอง</a><a class="switcher-link" href="/labor.html">กฎหมายแรงงาน</a></nav>
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<div class="layout">
+<label for="nav-toggle" class="nav-toggle-label">☰ สารบัญ</label>
+<label for="nav-toggle" class="nav-backdrop"></label>
+<nav id="sidebar">
+  <h2>พระราชบัญญัติความรับผิดทางละเมิดของเจ้าหน้าที่ พ.ศ. ๒๕๓๙</h2>
+  <ul><li><details><summary class="nav-section">พระราชบัญญัติความรับผิดทางละเมิดของเจ้าหน้าที่ พ.ศ. ๒๕๓๙</summary><ul><li><a href="#n2">มาตรา ๑</a></li><li><a href="#n3">มาตรา ๒</a></li><li><a href="#n4">มาตรา ๓</a></li><li><a href="#n5">มาตรา ๔</a></li><li><a href="#n6">มาตรา ๕</a></li><li><a href="#n7">มาตรา ๖</a></li><li><a href="#n8">มาตรา ๗</a></li><li><a href="#n9">มาตรา ๘</a></li><li><a href="#n10">มาตรา ๙</a></li><li><a href="#n11">มาตรา ๑๐</a></li><li><a href="#n12">มาตรา ๑๑</a></li><li><a href="#n13">มาตรา ๑๒</a></li><li><a href="#n14">มาตรา ๑๓</a></li><li><a href="#n15">มาตรา ๑๔</a></li><li><a href="#n16">มาตรา ๑๕</a></li></ul></details></li></ul>
+</nav>
+<main>
+  <section id="n1" class="node node-section"><h6>พระราชบัญญัติความรับผิดทางละเมิดของเจ้าหน้าที่ พ.ศ. ๒๕๓๙</h6><section id="n2" class="node node-article"><h5>มาตรา ๑</h5><p class="statute">พระราชบัญญัตินี้เรียกว่า “พระราชบัญญัติความรับผิดทางละเมิดของเจ้าหน้าที่ พ.ศ. ๒๕๓๙”</p></section><section id="n3" class="node node-article"><h5>มาตรา ๒</h5><p class="statute">พระราชบัญญัตินี้ให้ใช้บังคับตั้งแต่วันถัดจากวันประกาศในราชกิจจานุเบกษาเป็นต้นไป</p></section><section id="n4" class="node node-article"><h5>มาตรา ๓</h5><p class="statute">บรรดากฎหมาย กฎ และข้อบังคับใด ๆ ในส่วนที่มีบัญญัติไว้แล้วในพระราชบัญญัตินี้หรือซึ่งขัดหรือแย้งกับบทแห่งพระราชบัญญัตินี้ ให้ใช้พระราชบัญญัตินี้แทน</p></section><section id="n5" class="node node-article"><h5>มาตรา ๔</h5><p class="statute">ในพระราชบัญญัตินี้</p><p class="statute">“เจ้าหน้าที่” หมายความว่า ข้าราชการ พนักงาน ลูกจ้าง หรือผู้ปฏิบัติงานประเภทอื่น ไม่ว่าจะเป็นการแต่งตั้งในฐานะเป็นกรรมการหรือฐานะอื่นใด</p><p class="statute">“หน่วยงานของรัฐ” หมายความว่า กระทรวง ทบวง กรม หรือส่วนราชการที่เรียกชื่ออย่างอื่นและมีฐานะเป็นกรม ราชการส่วนภูมิภาค ราชการส่วนท้องถิ่น และรัฐวิสาหกิจที่ตั้งขึ้นโดยพระราชบัญญัติหรือพระราชกฤษฎีกา และให้หมายความรวมถึงหน่วยงานอื่นของรัฐที่มีพระราชกฤษฎีกากำหนดให้เป็นหน่วยงานของรัฐตามพระราชบัญญัตินี้ด้วย</p></section><section id="n6" class="node node-article"><h5>มาตรา ๕</h5><p class="statute">หน่วยงานของรัฐต้องรับผิดต่อผู้เสียหายในผลแห่งละเมิดที่เจ้าหน้าที่ของตนได้กระทำในการปฏิบัติหน้าที่ ในกรณีนี้ผู้เสียหายอาจฟ้องหน่วยงานของรัฐดังกล่าวได้โดยตรง แต่จะฟ้องเจ้าหน้าที่ไม่ได้</p><p class="statute">ถ้าการละเมิดเกิดจากเจ้าหน้าที่ซึ่งไม่ได้สังกัดหน่วยงานของรัฐแห่งใดให้ถือว่ากระทรวงการคลังเป็นหน่วยงานของรัฐที่ต้องรับผิดตามวรรคหนึ่ง</p></section><section id="n7" class="node node-article"><h5>มาตรา ๖</h5><p class="statute">ถ้าการกระทำละเมิดของเจ้าหน้าที่มิใช่การกระทำในการปฏิบัติหน้าที่ เจ้าหน้าที่ต้องรับผิดในการนั้นเป็นการเฉพาะตัว ในกรณีนี้ผู้เสียหายอาจฟ้องเจ้าหน้าที่ได้โดยตรงแต่จะฟ้องหน่วยงานของรัฐไม่ได้</p></section><section id="n8" class="node node-article"><h5>มาตรา ๗</h5><p class="statute">ในคดีที่ผู้เสียหายฟ้องหน่วยงานของรัฐ ถ้าหน่วยงานของรัฐเห็นว่าเป็นเรื่องที่เจ้าหน้าที่ต้องรับผิดหรือต้องร่วมรับผิด หรือในคดีที่ผู้เสียหายฟ้องเจ้าหน้าที่ถ้าเจ้าหน้าที่เห็นว่าเป็นเรื่องที่หน่วยงานของรัฐต้องรับผิดหรือต้องร่วมรับผิด หน่วยงานของรัฐหรือเจ้าหน้าที่ดังกล่าวมีสิทธิขอให้ศาลที่พิจารณาคดีนั้นอยู่เรียกเจ้าหน้าที่หรือหน่วยงานของรัฐ แล้วแต่กรณี เข้ามาเป็นคู่ความในคดี</p><p class="statute">ถ้าศาลพิพากษายกฟ้องเพราะเหตุที่หน่วยงานของรัฐหรือเจ้าหน้าที่ที่ถูกฟ้องมิใช่ผู้ต้องรับผิด ให้ขยายอายุความฟ้องร้องผู้ที่ต้องรับผิดซึ่งมิได้ถูกเรียกเข้ามาในคดีออกไปถึงหกเดือนนับแต่วันที่คำพิพากษานั้นถึงที่สุด</p></section><section id="n9" class="node node-article"><h5>มาตรา ๘</h5><p class="statute">ในกรณีที่หน่วยงานของรัฐต้องรับผิดใช้ค่าสินไหมทดแทนแก่ผู้เสียหายเพื่อการละเมิดของเจ้าหน้าที่ ให้หน่วยงานของรัฐมีสิทธิเรียกให้เจ้าหน้าที่ผู้ทำละเมิดชดใช้ค่าสินไหมทดแทนดังกล่าวแก่หน่วยงานของรัฐได้ ถ้าเจ้าหน้าที่ได้กระทำการนั้นไปด้วยความจงใจหรือประมาทเลินเล่ออย่างร้ายแรง</p><p class="statute">สิทธิเรียกให้ชดใช้ค่าสินไหมทดแทนตามวรรคหนึ่งจะมีได้เพียงใดให้คำนึงถึงระดับความร้ายแรงแห่งการกระทำและความเป็นธรรมในแต่ละกรณีเป็นเกณฑ์โดยมิต้องให้ใช้เต็มจำนวนของความเสียหายก็ได้</p><p class="statute">ถ้าการละเมิดเกิดจากความผิดหรือความบกพร่องของหน่วยงานของรัฐหรือระบบการดำเนินงานส่วนรวม ให้หักส่วนแห่งความรับผิดดังกล่าวออกด้วย</p><p class="statute">ในกรณีที่การละเมิดเกิดจากเจ้าหน้าที่หลายคน มิให้นำหลักเรื่องลูกหนี้ร่วมมาใช้บังคับและเจ้าหน้าที่แต่ละคนต้องรับผิดใช้ค่าสินไหมทดแทนเฉพาะส่วนของตนเท่านั้น</p></section><section id="n10" class="node node-article"><h5>มาตรา ๙</h5><p class="statute">ถ้าหน่วยงานของรัฐหรือเจ้าหน้าที่ได้ใช้ค่าสินไหมทดแทนแก่ผู้เสียหาย สิทธิที่จะเรียกให้อีกฝ่ายหนึ่งชดใช้ค่าสินไหมทดแทนแก่ตนให้มีกำหนดอายุความหนึ่งปีนับแต่วันที่หน่วยงานของรัฐหรือเจ้าหน้าที่ได้ใช้ค่าสินไหมทดแทนนั้นแก่ผู้เสียหาย</p></section><section id="n11" class="node node-article"><h5>มาตรา ๑๐</h5><p class="statute">ในกรณีที่เจ้าหน้าที่เป็นผู้กระทำละเมิดต่อหน่วยงานของรัฐไม่ว่าจะเป็นหน่วยงานของรัฐที่ผู้นั้นอยู่ในสังกัดหรือไม่ ถ้าเป็นการกระทำในการปฏิบัติหน้าที่การเรียกร้องค่าสินไหมทดแทนจากเจ้าหน้าที่ให้นำบทบัญญัติมาตรา ๘ มาใช้บังคับโดยอนุโลม แต่ถ้ามิใช่การกระทำในการปฏิบัติหน้าที่ให้บังคับตามบทบัญญัติแห่งประมวลกฎหมายแพ่งและพาณิชย์</p><p class="statute">สิทธิเรียกร้องค่าสินไหมทดแทนจากเจ้าหน้าที่ทั้งสองประการตามวรรคหนึ่ง ให้มีกำหนดอายุความสองปีนับแต่วันที่หน่วยงานของรัฐรู้ถึงการละเมิดและรู้ตัวเจ้าหน้าที่ ผู้จะพึงต้องใช้ค่าสินไหมทดแทน และกรณีที่หน่วยงานของรัฐเห็นว่าเจ้าหน้าที่ผู้นั้นไม่ต้องรับผิด แต่กระทรวงการคลังตรวจสอบแล้วเห็นว่าต้องรับผิด ให้สิทธิเรียกร้องค่าสินไหมทดแทนนั้นมีกำหนดอายุความหนึ่งปีนับแต่วันที่หน่วยงานของรัฐมีคำสั่งตามความเห็นของกระทรวงการคลัง</p></section><section id="n12" class="node node-article"><h5>มาตรา ๑๑</h5><p class="statute">ในกรณีที่ผู้เสียหายเห็นว่า หน่วยงานของรัฐต้องรับผิดตามมาตรา ๕ ผู้เสียหายจะยื่นคำขอต่อหน่วยงานของรัฐให้พิจารณาชดใช้ค่าสินไหมทดแทนสำหรับความเสียหายที่เกิดแก่ตนก็ได้ ในการนี้หน่วยงานของรัฐต้องออกใบรับคำขอให้ไว้เป็นหลักฐานและพิจารณาคำขอนั้นโดยไม่ชักช้า เมื่อหน่วยงานของรัฐมีคำสั่งเช่นใดแล้วหากผู้เสียหายยังไม่พอใจในผลการวินิจฉัยของหน่วยงานของรัฐก็ให้มีสิทธิร้องทุกข์ต่อคณะกรรมการวินิจฉัยร้องทุกข์ตามกฎหมายว่าด้วยคณะกรรมการกฤษฎีกาได้ภายในเก้าสิบวันนับแต่วันที่ตนได้รับแจ้งผลการวินิจฉัย</p><p class="statute">ให้หน่วยงานของรัฐพิจารณาคำขอที่ได้รับตามวรรคหนึ่งให้แล้วเสร็จภายในหนึ่งร้อยแปดสิบวัน หากเรื่องใดไม่อาจพิจารณาได้ทันในกำหนดนั้นจะต้องรายงานปัญหาและอุปสรรคให้รัฐมนตรีเจ้าสังกัดหรือกำกับหรือควบคุมดูแลหน่วยงานของรัฐแห่งนั้นทราบและขออนุมัติขยายระยะเวลาออกไปได้ แต่รัฐมนตรีดังกล่าวจะพิจารณาอนุมัติให้ขยายระยะเวลาให้อีกได้ไม่เกินหนึ่งร้อยแปดสิบวัน</p></section><section id="n13" class="node node-article"><h5>มาตรา ๑๒</h5><p class="statute">ในกรณีที่เจ้าหน้าที่ต้องชดใช้ค่าสินไหมทดแทนที่หน่วยงานของรัฐได้ใช้ให้แก่ผู้เสียหายตามมาตรา ๘ หรือในกรณีที่เจ้าหน้าที่ต้องใช้ค่าสินไหมทดแทนเนื่องจากเจ้าหน้าที่ผู้นั้นได้กระทำละเมิดต่อหน่วยงานของรัฐตามมาตรา ๑๐ ประกอบกับมาตรา ๘ ให้หน่วยงานของรัฐที่เสียหายมีอำนาจออกคำสั่งเรียกให้เจ้าหน้าที่ผู้นั้นชำระเงินดังกล่าวภายในเวลาที่กำหนด</p></section><section id="n14" class="node node-article"><h5>มาตรา ๑๓</h5><p class="statute">ให้คณะรัฐมนตรีจัดให้มีระเบียบเพื่อให้เจ้าหน้าที่ซึ่งต้องรับผิดตามมาตรา ๘ และมาตรา ๑๐ สามารถผ่อนชำระเงินที่จะต้องรับผิดนั้นได้โดยคำนึงถึงรายได้ ฐานะครอบครัวและความรับผิดชอบ และพฤติการณ์แห่งกรณีประกอบด้วย</p></section><section id="n15" class="node node-article"><h5>มาตรา ๑๔</h5><p class="statute">เมื่อได้มีการจัดตั้งศาลปกครองขึ้นแล้ว สิทธิร้องทุกข์ต่อคณะกรรมการวินิจฉัยร้องทุกข์ตามมาตรา ๑๑ ให้ถือว่าเป็นสิทธิฟ้องคดีต่อศาลปกครอง</p></section><section id="n16" class="node node-article"><h5>มาตรา ๑๕</h5><p class="statute">ให้นายกรัฐมนตรีรักษาการตามพระราชบัญญัตินี้</p></section></section>
+  <footer>อ่านอย่างเดียว — ต้นฉบับอยู่ใน Google Drive (Eddy/99_Claude/act3_liability). แก้ไขผ่าน Claude เท่านั้น</footer>
+</main>
+</div>
+</body>
+</html>
